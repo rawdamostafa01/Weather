@@ -1,0 +1,85 @@
+body {
+  color: #fff;
+}
+.section {
+  height: 300px;
+  background-image: url("../images/defult\ img.jpg");
+}
+.cardd ul {
+  list-style: none;
+}
+.cardd img {
+  width: 70px;
+  height: 50px;
+}
+input::placeholder {
+  color: #fff !important;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+.cardd ul {
+  display: none;
+}
+.active ul {
+  display: flex;
+  padding-inline: 20px;
+}
+.cardd .degry {
+  text-align: center;
+}
+.active .degry {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardd h2 {
+  display: none;
+}
+.cardd h1 {
+  margin-top: 0px;
+}
+.active h1 {
+  margin-top: 0px;
+}
+.active.cardd h2 {
+  display: block;
+}
+.active .sup {
+  display: none;
+}
+.cardd {
+  min-height: 300px;
+}
+.cardd {
+  border: 1px black solid;
+  background-color: rgba(0, 0, 0, 0.363);
+}
+.cardd .nav-card {
+  background-color: rgba(0, 0, 0, 0.573);
+}
+.active {
+  background-color: rgba(0, 0, 0, 0.779);
+}
+.active .nav-card {
+  background-color: rgb(0, 0, 0);
+}
+.active .body-card {
+  padding-inline: 20px;
+}
+.cardd .now {
+  display: none;
+}
+.active .now {
+  display: inline-block;
+}
+.cardd .day {
+  text-align: center;
+}
+.active .day {
+  display: flex;
+}
+.fs-7 {
+  font-size: 12px;
+}
