@@ -1,6 +1,7 @@
 // ^ element HTML----------
 let card = document.querySelector(".row");
 let input = document.querySelector("input");
+let but = document.querySelector(".but");
 // ^ app var----------------
 
 const api_key = "ea886c62137245829cb44803261808";
@@ -26,8 +27,6 @@ async function get_weather(location) {
 let currentlocation = "London";
 
 function succes(position) {
-  console.log(position.coords.longitude);
-  console.log(position.coords.latitude);
   currentlocation = `${position.coords.latitude},${position.coords.longitude}`;
   get_weather(currentlocation);
 }
@@ -37,9 +36,7 @@ function error(err) {
 }
 
 function display_weather(data) {
-  console.log(data);
   const days = data.forecast.forecastday;
-  console.log(days);
   const now = new Date();
   let html_card = "";
   for (let [index, day] of days.entries()) {
@@ -114,11 +111,16 @@ window.addEventListener("load", function () {
   }
 });
 
-input.addEventListener("keyup", function (e) {
-  if (e.code == "Enter") {
+input.addEventListener("keydown", function (e) {
+  if (e.code === "Enter" || e.key === "Enter") {
     get_weather(this.value);
     get_clear();
   }
+});
+
+but.addEventListener("click", function () {
+  get_weather(input.value);
+  get_clear();
 });
 
 function get_clear() {

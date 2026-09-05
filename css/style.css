@@ -3,7 +3,9 @@ body {
 }
 .section {
   height: 300px;
-  background-image: url("../images/defult\ img.jpg");
+  background-image: url("../images/hero.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .cardd ul {
   list-style: none;
@@ -54,7 +56,7 @@ input::placeholder {
 }
 .cardd {
   border: 1px black solid;
-  background-color: rgba(0, 0, 0, 0.363);
+  background-color: rgba(0, 0, 0, 0.479);
 }
 .cardd .nav-card {
   background-color: rgba(0, 0, 0, 0.573);
@@ -82,4 +84,11 @@ input::placeholder {
 }
 .fs-7 {
   font-size: 12px;
+}
+.but {
+  background-color: #f1a520 !important;
+  color: #ffff !important;
+}
+.but:hover {
+  background-color: #f39a00 !important;
 }
